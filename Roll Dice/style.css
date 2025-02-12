@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(61, 152, 79);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    background-color: rgb(178, 141, 180);
+    border-radius: 5px;
+    box-shadow: 20px 20px 10px rgb(46, 49, 55);
+    padding: 1.5em;
+    width: 10em;
+    text-align: center;
+    animation: scaleShadow 2s infinite alternate ease-in-out;
+}
+
+@keyframes scaleShadow {
+    0% {
+        transform: scale(1); /* Starting bigger */
+        box-shadow: 30px 30px 15px rgb(46, 49, 55); /* Shadow further out */
+    }
+    100% {
+        transform: scale(0.9); /* Scaling down */
+        box-shadow: 10px 10px 5px rgb(46, 49, 55); /* Shadow closer */
+    }
+}
+
+button {
+    outline: none;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
