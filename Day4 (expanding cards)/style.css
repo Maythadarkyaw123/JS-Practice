@@ -18,7 +18,6 @@ body{
 .container{
     display: flex;
     width: 90vw;
-    border: 2px solid;
 }
 
 .panel {
