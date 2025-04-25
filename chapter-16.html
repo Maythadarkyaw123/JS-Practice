@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associative & Objective Arrays</title>
+    <script>
+        //let arrDays = ["Monday", "Tuesday"];
+        //document.write(arrDays[0]);
+
+        //Associative array
+        //arrDays = new Array();
+        //arrDays["Monday"] = "Go to school"; //array length is 3
+        //arrDays["Tuesday"] = "Go to playground"; //array length is 4
+
+        //alert(arrDays["Monday"]);
+
+        let Week = ["Sunday", "Monday", "Tuesday", "Wednesday",
+                    "Thursday", "Friday", "Saturday"];
+        Week = new Array();
+        Week["Sunday"] = "First Holiday";
+        Week["Monday"] = "First School Day";
+        Week["Tuesday"] = "let's continue";
+        Week["Wednesday"] = "you can do it";
+        Week["Thursday"] = "Fighting";
+        Week["Firday"] = "The last day of school";
+        Week["Saturday"] = "Now Holiday";
+
+        let userInput = prompt("Name of the day in a week : Example - Sunday");
+        if(userInput == ''){
+            alert("Please fill the day.");
+        }
+        else if(userInput == userInput.toLocaleLowerCase()){
+            alert("First character must be uppercase.");
+        }
+        else{
+            document.write(Week[userInput]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

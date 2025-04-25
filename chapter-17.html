@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimentional Array</title>
+    <script>
+        let week1 = {
+            "Sunday": "First Holiday",
+            "Monday": "First School Day",
+            "Tuesday": "Let's continue",
+            "Wednesday": "You can do it",
+            "Thursday": "Fighting",
+            "Friday": "The last day of school",
+            "Saturday": "Now Holiday"
+        };
+        
+        let week2 = {
+            "Sunday": "Second Holiday",
+            "Monday": "Stay Motivated",
+            "Tuesday": "Keep Learning",
+            "Wednesday": "Halfway Through",
+            "Thursday": "Almost There",
+            "Friday": "Prepare for the Weekend",
+            "Saturday": "Time to Relax"
+        };
+        
+        let week3 = {
+            "Sunday": "Third Holiday",
+            "Monday": "Back to School",
+            "Tuesday": "Stay Focused",
+            "Wednesday": "Work Hard",
+            "Thursday": "Review Lessons",
+            "Friday": "Prepping for Tests",
+            "Saturday": "Weekend Starts"
+        };
+        
+        // Week 4 contains a **three-dimensional structure**
+        let week4 = {
+            "Sunday": ["Rest Time"],
+            "Monday": ["Math 8am", "Science 9am", "Break 10am", "History 11am", "Lunch 12pm", "Sports 1pm", "English 2pm", "Coding 3pm", "Wrap-up 4pm", "Home Time 5pm"],
+            "Tuesday": ["Physics 8am", "Chemistry 9am", "Break 10am", "Geography 11am", "Lunch 12pm", "Drama 1pm", "Reading 2pm", "Lab 3pm", "Discussions 4pm", "Home Time 5pm"],
+            // Define remaining days similarly...
+        };
+        
+        // Store the 4 weeks in a **month array**
+        let month = [week1, week2, week3, week4];
+        
+        let chosenWeek = prompt("Enter the week number (1-4):");
+let chosenDay = prompt("Enter the day (Sunday-Saturday):");
+let chosenHour = prompt("Enter the hour (8-17, if applicable):");
+
+if (chosenWeek >= 1 && chosenWeek <= 4) {
+    let selectedWeek = month[chosenWeek - 1];
+
+    if (selectedWeek[chosenDay]) {
+        if (Array.isArray(selectedWeek[chosenDay])) {
+            let hourIndex = chosenHour - 8;
+            if (selectedWeek[chosenDay][hourIndex]) {
+                alert(selectedWeek[chosenDay][hourIndex]);
+            } else {
+                alert("No task found for this hour.");
+            }
+        } else {
+            alert(selectedWeek[chosenDay]);
+        }
+    } else {
+        alert("Invalid day entered.");
+    }
+} else {
+    alert("Invalid week number.");
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
